@@ -53,6 +53,7 @@ public class Part1Activity extends ActionBarActivity {
     }
 
     private void hideViews() {
+        /**生成属性动画去直接改变位置*/
         toolbar.animate().translationY(-toolbar.getMeasuredHeight()).setInterpolator(new
                 AccelerateInterpolator(2));
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) ibtn_faq.getLayoutParams();
@@ -64,8 +65,6 @@ public class Part1Activity extends ActionBarActivity {
     private void showViews() {
         toolbar.animate().translationY(0).setInterpolator(new AccelerateInterpolator(2));
         ibtn_faq.animate().translationY(0).setInterpolator(new AccelerateInterpolator(2)).start();
-
-
     }
 
     private List<String> createItemList() {
